@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh" class="h-full bg-gray-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online watermark - remove watermark - best ai watermark remover - 去水印 - 专业的在线图片水印工具</title>
+    <meta name="keywords" content="remove watermark,remove watermark from photo,tiktok watermark remover,how to remove watermark from photo,remove watermark from video,imagined with ai watermark,ai watermark generator,best ai watermark remover,Online watermark processing,Free online watermark processing,Generate watermark, ai tool, free ai tool,open ai tool,在线处理水印,在线生成水印,去水印,ai去水印,最好的ai去水印,ai工具,免费ai工具" />
+    <meta name="description" content="remove watermark,remove watermark from photo,tiktok watermark remover,how to remove watermark from photo,remove watermark from video,imagined with ai watermark,ai watermark generator,best ai watermark remover,Online watermark processing,Free online watermark processing,Generate watermark, ai tool, free ai tool,open ai tool,在线处理水印,在线生成水印,去水印,ai去水印,最好的ai去水印,ai工具,免费ai工具" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.16.13/antd.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/antd/4.16.13/antd.min.js" defer></script>
+    <script src="https://cdn.tailwindcss.com" ></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link id="favicon" rel="icon" type="image/png" href="assets/favicon.ico">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-848STC1H4W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-848STC1H4W');
+    </script>
+    <script src="js/main.js" defer></script>
+</head>
+<body class="h-full flex flex-col">
+    <div class="flex-grow">
+        <nav class="bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center">
+
+                        <h1 class="text-2xl font-bold text-white ml-4">Online watermark</h1>
+                    </div>
+                    <div class="flex items-center">
+                        <a title="在线base64转码" class="text-white" style="text-decoration: underline;" href="https://base64.openai2025.com" target="_blank">
+                            Online base64 transcoding
+                        </a>
+                        <a title="json格式化工具" class="text-white" style="text-decoration: underline;margin-left: 10px" href="https://json.openai2025.com" target="_blank">
+                            Online JSON formatting
+                        </a>
+                        <a title="正则表达式测试工具" class="text-white" style="text-decoration: underline;margin-left: 10px" href="https://reg.openai2025.com" target="_blank">
+                            Regular expression testing tool
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+                <div class="px-4 py-6 sm:px-0">
+                    <div class="border-4 border-dashed border-gray-200 rounded-lg h-48 md:h-96 mb-4 relative">
+                        <div id="dropzone" class="w-full h-full flex items-center justify-center cursor-pointer absolute inset-0">
+                            <div class="text-center">
+                                <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-2"></i>
+                                <p class="text-gray-500">Click or drag and drop images here</p>
+                                <p class="dropzone-info">Supports JPG/PNG formats, up to 5MB</p>
+                                <input type="file" id="imageInput" accept="image/jpeg,image/png" class="hidden" />
+                            </div>
+                        </div>
+                        <canvas id="imageCanvas" class="hidden w-full h-full object-contain"></canvas>
+                        <button id="changeImageButton" class="hidden absolute bottom-2 right-2 text-sm text-gray-500 underline">Replace image</button>
+                    </div>
+                    <div id="feedback" class="fixed bottom-4 right-4 hidden bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded shadow-lg" role="alert">
+                        <span class="block sm:inline" id="feedbackMessage"></span>
+                    </div>
+                    <div class="mt-5 md:mt-0 md:col-span-2">
+                        <form class="ant-form ant-form-horizontal ant-form-default form-container">
+                            <div class="form-row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                                <div class="form-item col-span-1 lg:col-span-4">
+                                    <label for="watermarkText">Watermark Text</label>
+                                    <input type="text" name="watermarkText" id="watermarkText" class="ant-input" value="For XXX use only" title="请输入水印文字">
+                                </div>
+                                <div class="form-item col-span-1 lg:col-span-2">
+                                    <label for="watermarkColor">Watermark color</label>
+                                    <div class="flex items-center">
+                                        <input type="color" name="watermarkColor" id="watermarkColor" value="#FFFFFF" class="color-picker" title="选择水印颜色">
+                                        <input type="text" name="watermarkColorText" id="watermarkColorText" class="ant-input ml-2" value="#FFFFFF" title="输入水印颜色代码">
+                                    </div>
+                                </div>
+                                <div class="form-item col-span-1 lg:col-span-2">
+                                    <label for="watermarkStyle">Watermark style</label>
+                                    <div class="flex items-center">
+                                        <div class="mr-4">
+                                            <input type="radio" id="striped" name="watermarkStyle" value="STRIPED" checked>
+                                            <label for="striped" title="斜向重复">Oblique repetition</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="central" name="watermarkStyle" value="CENTRAL">
+                                            <label for="central" title="居中">Center</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-item col-span-1 lg:col-span-1">
+                                    <label for="watermarkAngle">Watermark rotation angle</label>
+                                    <div class="flex items-center">
+                                        <input type="range" name="watermarkAngle" id="watermarkAngle" min="0" max="360" value="335" class="ant-slider" title="调整水印的旋转角度">
+                                        <span id="angleValue" class="text-sm text-gray-500">335°</span>
+                                    </div>
+                                </div>
+                                <div class="form-item col-span-1 lg:col-span-1">
+                                    <label for="watermarkOpacity">Watermark transparency</label>
+                                    <div class="flex items-center">
+                                        <input type="range" name="watermarkOpacity" id="watermarkOpacity" min="0" max="1" step="0.1" value="0.2" class="ant-slider" title="调整水印的透明度">
+                                        <span id="opacityValue" class="text-sm text-gray-500">0.2</span>
+                                    </div>
+                                </div>
+                                <div class="form-item col-span-1 lg:col-span-1">
+                                    <label for="watermarkSize">Watermark font size</label>
+                                    <div class="flex items-center">
+                                        <input type="range" name="watermarkSize" id="watermarkSize" min="10" max="100" value="16" class="ant-slider" title="调整水印的字体大小">
+                                        <span id="sizeValue" class="text-sm text-gray-500">16</span>
+                                    </div>
+                                </div>
+                                <div class="form-item col-span-1 lg:col-span-1">
+                                    <label for="watermarkSpace">Watermark spacing</label>
+                                    <div class="flex items-center">
+                                        <input type="range" name="watermarkSpace" id="watermarkSpace" min="0" max="100" value="24" class="ant-slider" title="调整水印的间距">
+                                        <span id="spaceValue" class="text-sm text-gray-500">24</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-buttons px-4 py-3 bg-gray-50 sm:px-6 text-right">
+                                <button type="button" id="applyWatermark" class="ant-btn ant-btn-primary inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                    Apply watermark
+                                </button>
+                                <button type="button" id="saveImage" class="ant-btn ant-btn-success ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                                    Save Picture
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-4 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>© 2025 openai2025 Copyright</p>
+        </div>
+    </footer>
+
+</body>
+</html>
