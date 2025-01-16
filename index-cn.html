@@ -30,29 +30,29 @@
                 <div class="flex items-center justify-between h-16">
                     <div class="flex items-center">
 
-                        <h1 class="text-2xl font-bold text-white ml-4">Online watermark</h1>
+                        <h1 class="text-2xl font-bold text-white ml-4">水印处理</h1>
                     </div>
                     <div class="flex items-center">
-                        <a title="在线base64转码" class="text-white link-a"  href="https://base64.openai2025.com" target="_blank">
-                            Base64 Tool
+                        <a title="在线Base64转码" class="text-white link-a" href="https://base64.openai2025.com" target="_blank">
+                            Base64转码
                         </a>
                         <a title="json格式化工具" class="text-white link-a" href="https://json.openai2025.com" target="_blank">
-                            JSON Tool
+                            JSON工具
                         </a>
                         <a title="正则表达式测试工具" class="text-white link-a" href="https://reg.openai2025.com" target="_blank">
-                            Regular expression tool
+                            正则表达式工具
                         </a>
-                        <a title="mosaic Processing tool" class="text-white link-a" href="https://mosaic.openai2025.com" target="_blank">
-                            mosaic tool
+                        <a title="马赛克处理" class="text-white link-a" href="https://mosaic.openai2025.com" target="_blank">
+                            马赛克处理
                         </a>
                         <a title="图片压缩" class="text-white link-a" href="https://compress.openai2025.com" target="_blank">
-                            Image compression
+                            图片压缩
                         </a>
-                        <a title="Convert images to Excel" class="text-white link-a" href="https://img2excel.openai2025.com" target="_blank">
-                            images to Excel
+                        <a title="图片转Excel" class="text-white link-a" href="https://img2excel.openai2025.com" target="_blank">
+                            图片转Excel
                         </a>
-                        <a title="Image to icon conversion" class="text-white link-a" href="https://icon.openai2025.com" target="_blank">
-                            Image to icon
+                        <a title="图片转icon" class="text-white link-a" href="https://icon.openai2025.com" target="_blank">
+                            图片转icon
                         </a>
                     </div>
                 </div>
@@ -66,13 +66,13 @@
                         <div id="dropzone" class="w-full h-full flex items-center justify-center cursor-pointer absolute inset-0">
                             <div class="text-center">
                                 <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-2"></i>
-                                <p class="text-gray-500">Click or drag and drop images here</p>
-                                <p class="dropzone-info">Supports JPG/PNG formats, up to 5MB</p>
+                                <p class="text-gray-500">在此处单击或拖放图像</p>
+                                <p class="dropzone-info">支持JPG/PNG格式，最大5MB</p>
                                 <input type="file" id="imageInput" accept="image/jpeg,image/png" class="hidden" />
                             </div>
                         </div>
                         <canvas id="imageCanvas" class="hidden w-full h-full object-contain"></canvas>
-                        <button id="changeImageButton" class="hidden absolute bottom-2 right-2 text-sm text-gray-500 underline">Replace image</button>
+                        <button id="changeImageButton" class="hidden absolute bottom-2 right-2 text-sm text-gray-500 underline">替换图像</button>
                     </div>
                     <div id="feedback" class="fixed bottom-4 right-4 hidden bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded shadow-lg" role="alert">
                         <span class="block sm:inline" id="feedbackMessage"></span>
@@ -81,52 +81,52 @@
                         <form class="ant-form ant-form-horizontal ant-form-default form-container">
                             <div class="form-row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                                 <div class="form-item col-span-1 lg:col-span-4">
-                                    <label for="watermarkText">Watermark Text</label>
-                                    <input type="text" name="watermarkText" id="watermarkText" class="ant-input" value="I Love You" title="请输入水印文字">
+                                    <label for="watermarkText">水印文本</label>
+                                    <input type="text" name="watermarkText" id="watermarkText" class="ant-input" value="我爱你" title="请输入水印文字">
                                 </div>
                                 <div class="form-item col-span-1 lg:col-span-2">
-                                    <label for="watermarkColor">Watermark color</label>
+                                    <label for="watermarkColor">水印颜色</label>
                                     <div class="flex items-center">
                                         <input type="color" name="watermarkColor" id="watermarkColor" value="#FFFFFF" class="color-picker" title="选择水印颜色">
                                         <input type="text" name="watermarkColorText" id="watermarkColorText" class="ant-input ml-2" value="#FFFFFF" title="输入水印颜色代码">
                                     </div>
                                 </div>
                                 <div class="form-item col-span-1 lg:col-span-2">
-                                    <label for="watermarkStyle">Watermark style</label>
+                                    <label for="watermarkStyle">水印样式</label>
                                     <div class="flex items-center">
                                         <div class="mr-4">
                                             <input type="radio" id="striped" name="watermarkStyle" value="STRIPED" checked>
-                                            <label for="striped" title="斜向重复">Oblique repetition</label>
+                                            <label for="striped" title="斜向重复">斜向重复</label>
                                         </div>
                                         <div>
                                             <input type="radio" id="central" name="watermarkStyle" value="CENTRAL">
-                                            <label for="central" title="居中">Center</label>
+                                            <label for="central" title="居中">居中</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-item col-span-1 lg:col-span-1">
-                                    <label for="watermarkAngle">Watermark rotation angle</label>
+                                    <label for="watermarkAngle">水印旋转角度</label>
                                     <div class="flex items-center">
                                         <input type="range" name="watermarkAngle" id="watermarkAngle" min="0" max="360" value="335" class="ant-slider" title="调整水印的旋转角度">
                                         <span id="angleValue" class="text-sm text-gray-500">335°</span>
                                     </div>
                                 </div>
                                 <div class="form-item col-span-1 lg:col-span-1">
-                                    <label for="watermarkOpacity">Watermark transparency</label>
+                                    <label for="watermarkOpacity">水印透明度</label>
                                     <div class="flex items-center">
                                         <input type="range" name="watermarkOpacity" id="watermarkOpacity" min="0" max="1" step="0.1" value="0.2" class="ant-slider" title="调整水印的透明度">
                                         <span id="opacityValue" class="text-sm text-gray-500">0.2</span>
                                     </div>
                                 </div>
                                 <div class="form-item col-span-1 lg:col-span-1">
-                                    <label for="watermarkSize">Watermark font size</label>
+                                    <label for="watermarkSize">水印字体大小</label>
                                     <div class="flex items-center">
                                         <input type="range" name="watermarkSize" id="watermarkSize" min="10" max="100" value="16" class="ant-slider" title="调整水印的字体大小">
                                         <span id="sizeValue" class="text-sm text-gray-500">16</span>
                                     </div>
                                 </div>
                                 <div class="form-item col-span-1 lg:col-span-1">
-                                    <label for="watermarkSpace">Watermark spacing</label>
+                                    <label for="watermarkSpace">水印间距</label>
                                     <div class="flex items-center">
                                         <input type="range" name="watermarkSpace" id="watermarkSpace" min="0" max="100" value="24" class="ant-slider" title="调整水印的间距">
                                         <span id="spaceValue" class="text-sm text-gray-500">24</span>
@@ -135,10 +135,10 @@
                             </div>
                             <div class="form-buttons px-4 py-3 bg-gray-50 sm:px-6 text-right">
                                 <button type="button" id="applyWatermark" class="ant-btn ant-btn-primary inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                    Apply watermark
+                                    应用水印
                                 </button>
                                 <button type="button" id="saveImage" class="ant-btn ant-btn-success ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-                                    Save Picture
+                                    保存图片
                                 </button>
                             </div>
                         </form>
@@ -148,7 +148,7 @@
 
         </main>
     </div>
-    <center>(<a href="./index-cn.html">Simplified Chinese</a> | <a href="./index.html">English</a>)</center>
+    <center>(<a href="./index-cn.html">简体中文</a> | <a href="./index.html">English</a>)</center>
     <footer class="bg-gray-800 text-white py-4 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p>© 2025 openai2025 Copyright</p>
