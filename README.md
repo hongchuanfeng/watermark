@@ -8,4 +8,4 @@
 
 示例地址：
 
-[http://](https://watermark.openai2025.com/)
+[https://watermark.openai2025.com/](https://watermark.openai2025.com/)
