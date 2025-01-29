@@ -9,7 +9,18 @@
 
 <url>
   <loc>https://watermark.openai2025.com/</loc>
-  <lastmod>2025-01-12T18:26:26+00:00</lastmod>
+  <lastmod>2025-01-29T04:57:51+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://watermark.openai2025.com/index-cn.html</loc>
+  <lastmod>2025-01-29T04:57:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://watermark.openai2025.com/index.html</loc>
+  <lastmod>2025-01-29T04:57:52+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
