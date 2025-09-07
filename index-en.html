@@ -2,7 +2,7 @@
 <html lang="zh" class="h-full bg-gray-100">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Online watermark - remove watermark - best ai watermark remover </title>
     <meta name="keywords" content="remove watermark,remove watermark from photo,tiktok watermark remover,how to remove watermark from photo,remove watermark from video,imagined with ai watermark,ai watermark generator,best ai watermark remover,Online watermark processing,Free online watermark processing,Generate watermark, ai tool, free ai tool,open ai tool,在线处理水印,在线生成水印,去水印,ai去水印,最好的ai去水印,ai工具,免费ai工具" />
     <meta name="description" content="remove watermark,remove watermark from photo,tiktok watermark remover,how to remove watermark from photo,remove watermark from video,imagined with ai watermark,ai watermark generator,best ai watermark remover,Online watermark processing,Free online watermark processing,Generate watermark, ai tool, free ai tool,open ai tool,在线处理水印,在线生成水印,去水印,ai去水印,最好的ai去水印,ai工具,免费ai工具" />
@@ -12,7 +12,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link id="favicon" rel="icon" type="image/png" href="assets/favicon.ico">
-    <link rel="canonical" href="https://watermark.openai2025.com/">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-848STC1H4W"></script>
     <script>
@@ -32,97 +31,114 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-16">
                     <div class="flex items-center">
-
-                        <h1 class="text-2xl font-bold text-white ml-4">Online watermark</h1>
+                        <h1 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-200 ml-2 sm:ml-4">Online watermark</h1>
                     </div>
                     <div class="flex items-center">
-                     <a class="text-white link-a" href="https://www.openai2025.com" target="_blank">Chuandao software toolbox</a>
+                     <a class="text-blue-200 text-sm sm:text-base link-a" href="https://www.openai2025.com" target="_blank">Chuandao software toolbox</a>
                     </div>
                 </div>
             </div>
         </nav>
 
         <main>
-            <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-                <div class="px-4 py-6 sm:px-0">
-                    <div class="border-4 border-dashed border-gray-200 rounded-lg h-48 md:h-96 mb-4 relative">
+            <div class="max-w-7xl mx-auto py-4 sm:py-6 px-4 sm:px-6 lg:px-8">
+                <div class="px-2 sm:px-4 py-4 sm:py-6">
+                    <div class="border-4 border-dashed border-gray-200 rounded-lg h-64 sm:h-80 md:h-96 mb-4 relative">
                         <div id="dropzone" class="w-full h-full flex items-center justify-center cursor-pointer absolute inset-0">
-                            <div class="text-center">
-                                <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-2"></i>
-                                <p class="text-gray-500">Click or drag and drop images here</p>
-                                <p class="dropzone-info">Supports JPG/PNG formats, up to 5MB</p>
+                            <div class="text-center px-4">
+                                <i class="fas fa-cloud-upload-alt text-3xl sm:text-4xl text-gray-400 mb-2"></i>
+                                <p class="text-gray-500 text-sm sm:text-base">Click or drag and drop images here</p>
+                                <p class="dropzone-info text-xs sm:text-sm">Supports JPG/PNG formats, up to 5MB</p>
                                 <input type="file" id="imageInput" accept="image/jpeg,image/png" class="hidden" />
                             </div>
                         </div>
                         <canvas id="imageCanvas" class="hidden w-full h-full object-contain"></canvas>
-                        <button id="changeImageButton" class="hidden absolute bottom-2 right-2 text-sm text-gray-500 underline">Replace image</button>
+                        <button id="changeImageButton" class="hidden absolute bottom-2 right-2 text-xs sm:text-sm text-gray-500 underline bg-white px-2 py-1 rounded">Replace image</button>
                     </div>
                     <div id="feedback" class="fixed bottom-4 right-4 hidden bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded shadow-lg" role="alert">
                         <span class="block sm:inline" id="feedbackMessage"></span>
                     </div>
-                    <div class="mt-5 md:mt-0 md:col-span-2">
+                    <div class="mt-4 md:mt-5 md:col-span-2">
                         <form class="ant-form ant-form-horizontal ant-form-default form-container">
-                            <div class="form-row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                                <div class="form-item col-span-1 lg:col-span-4">
-                                    <label for="watermarkText">Watermark Text</label>
-                                    <input type="text" name="watermarkText" id="watermarkText" class="ant-input" value="I Love You" title="请输入水印文字">
+                            <div class="form-row grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+                                <div class="form-item col-span-1 sm:col-span-2 lg:col-span-4">
+                                    <label for="watermarkText" class="block text-sm font-medium text-gray-700 mb-2">Watermark Text</label>
+                                    <input type="text" name="watermarkText" id="watermarkText" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" value="I Love You" title="请输入水印文字">
                                 </div>
-                                <div class="form-item col-span-1 lg:col-span-2">
-                                    <label for="watermarkColor">Watermark color</label>
-                                    <div class="flex items-center">
-                                        <input type="color" name="watermarkColor" id="watermarkColor" value="#FFFFFF" class="color-picker" title="选择水印颜色">
-                                        <input type="text" name="watermarkColorText" id="watermarkColorText" class="ant-input ml-2" value="#FFFFFF" title="输入水印颜色代码">
+                                <div class="form-item col-span-1 sm:col-span-2 lg:col-span-2">
+                                    <label for="watermarkColor" class="block text-sm font-medium text-gray-700 mb-2">Watermark color</label>
+                                    <div class="flex items-center space-x-2">
+                                        <input type="color" name="watermarkColor" id="watermarkColor" value="#FFFFFF" class="w-12 h-10 border border-gray-300 rounded cursor-pointer" title="选择水印颜色">
+                                        <input type="text" name="watermarkColorText" id="watermarkColorText" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" value="#FFFFFF" title="输入水印颜色代码">
                                     </div>
                                 </div>
-                                <div class="form-item col-span-1 lg:col-span-2">
-                                    <label for="watermarkStyle">Watermark style</label>
-                                    <div class="flex items-center">
-                                        <div class="mr-4">
-                                            <input type="radio" id="striped" name="watermarkStyle" value="STRIPED" checked>
-                                            <label for="striped" title="斜向重复">Oblique repetition</label>
+                                <div class="form-item col-span-1 sm:col-span-2 lg:col-span-2">
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Watermark style</label>
+                                    <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
+                                        <label class="flex items-center">
+                                            <input type="radio" id="striped" name="watermarkStyle" value="STRIPED" checked class="mr-2">
+                                            <span class="text-sm">Oblique repetition</span>
+                                        </label>
+                                        <label class="flex items-center">
+                                            <input type="radio" id="central" name="watermarkStyle" value="CENTRAL" class="mr-2">
+                                            <span class="text-sm">Center</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-item col-span-1 sm:col-span-1 lg:col-span-1">
+                                    <label for="watermarkAngle" class="block text-sm font-medium text-gray-700 mb-2">Watermark rotation angle</label>
+                                    <div class="space-y-2">
+                                        <input type="range" name="watermarkAngle" id="watermarkAngle" min="0" max="360" value="335" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider" title="调整水印的旋转角度">
+                                        <div class="flex justify-between text-xs text-gray-500">
+                                            <span>0°</span>
+                                            <span id="angleValue" class="font-medium">335°</span>
+                                            <span>360°</span>
                                         </div>
-                                        <div>
-                                            <input type="radio" id="central" name="watermarkStyle" value="CENTRAL">
-                                            <label for="central" title="居中">Center</label>
+                                    </div>
+                                </div>
+                                <div class="form-item col-span-1 sm:col-span-1 lg:col-span-1">
+                                    <label for="watermarkOpacity" class="block text-sm font-medium text-gray-700 mb-2">Watermark transparency</label>
+                                    <div class="space-y-2">
+                                        <input type="range" name="watermarkOpacity" id="watermarkOpacity" min="0" max="1" step="0.1" value="0.2" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider" title="调整水印的透明度">
+                                        <div class="flex justify-between text-xs text-gray-500">
+                                            <span>0</span>
+                                            <span id="opacityValue" class="font-medium">0.2</span>
+                                            <span>1</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-item col-span-1 lg:col-span-1">
-                                    <label for="watermarkAngle">Watermark rotation angle</label>
-                                    <div class="flex items-center">
-                                        <input type="range" name="watermarkAngle" id="watermarkAngle" min="0" max="360" value="335" class="ant-slider" title="调整水印的旋转角度">
-                                        <span id="angleValue" class="text-sm text-gray-500">335°</span>
+                                <div class="form-item col-span-1 sm:col-span-1 lg:col-span-1">
+                                    <label for="watermarkSize" class="block text-sm font-medium text-gray-700 mb-2">Watermark font size</label>
+                                    <div class="space-y-2">
+                                        <input type="range" name="watermarkSize" id="watermarkSize" min="10" max="100" value="16" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider" title="调整水印的字体大小">
+                                        <div class="flex justify-between text-xs text-gray-500">
+                                            <span>10</span>
+                                            <span id="sizeValue" class="font-medium">16</span>
+                                            <span>100</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="form-item col-span-1 lg:col-span-1">
-                                    <label for="watermarkOpacity">Watermark transparency</label>
-                                    <div class="flex items-center">
-                                        <input type="range" name="watermarkOpacity" id="watermarkOpacity" min="0" max="1" step="0.1" value="0.2" class="ant-slider" title="调整水印的透明度">
-                                        <span id="opacityValue" class="text-sm text-gray-500">0.2</span>
-                                    </div>
-                                </div>
-                                <div class="form-item col-span-1 lg:col-span-1">
-                                    <label for="watermarkSize">Watermark font size</label>
-                                    <div class="flex items-center">
-                                        <input type="range" name="watermarkSize" id="watermarkSize" min="10" max="100" value="16" class="ant-slider" title="调整水印的字体大小">
-                                        <span id="sizeValue" class="text-sm text-gray-500">16</span>
-                                    </div>
-                                </div>
-                                <div class="form-item col-span-1 lg:col-span-1">
-                                    <label for="watermarkSpace">Watermark spacing</label>
-                                    <div class="flex items-center">
-                                        <input type="range" name="watermarkSpace" id="watermarkSpace" min="0" max="100" value="24" class="ant-slider" title="调整水印的间距">
-                                        <span id="spaceValue" class="text-sm text-gray-500">24</span>
+                                <div class="form-item col-span-1 sm:col-span-1 lg:col-span-1">
+                                    <label for="watermarkSpace" class="block text-sm font-medium text-gray-700 mb-2">Watermark spacing</label>
+                                    <div class="space-y-2">
+                                        <input type="range" name="watermarkSpace" id="watermarkSpace" min="0" max="100" value="24" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider" title="调整水印的间距">
+                                        <div class="flex justify-between text-xs text-gray-500">
+                                            <span>0</span>
+                                            <span id="spaceValue" class="font-medium">24</span>
+                                            <span>100</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-buttons px-4 py-3 bg-gray-50 sm:px-6 text-right">
-                                <button type="button" id="applyWatermark" class="ant-btn ant-btn-primary inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                    Apply watermark
-                                </button>
-                                <button type="button" id="saveImage" class="ant-btn ant-btn-success ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-                                    Save Picture
-                                </button>
+                            <div class="form-buttons px-2 sm:px-4 py-4 bg-gray-50 sm:px-6">
+                                <div class="flex flex-col sm:flex-row gap-3 sm:gap-0 sm:justify-end">
+                                    <button type="button" id="applyWatermark" class="w-full sm:w-auto ant-btn ant-btn-primary inline-flex justify-center items-center py-3 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
+                                        <i class="fas fa-magic mr-2"></i><span class="relative -top-0.5">Apply watermark</span>
+                                    </button>
+                                    <button type="button" id="saveImage" class="w-full sm:w-auto ant-btn ant-btn-success sm:ml-3 inline-flex justify-center items-center py-3 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors">
+                                        <i class="fas fa-download mr-2"></i><span class="relative -top-0.5">Save Picture</span>
+                                    </button>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -131,10 +147,16 @@
 
         </main>
     </div>
-    <center>(<a href="./index.html">Simplified Chinese</a> | <a href="./index-en.html">English</a>)</center>
+    <div class="text-center py-2 bg-gray-100">
+        <div class="flex justify-center space-x-4 text-sm">
+            <a href="./index.html" class="text-indigo-600 hover:text-indigo-800 font-medium">Simplified Chinese</a>
+            <span class="text-gray-400">|</span>
+            <a href="./index-en.html" class="text-indigo-600 hover:text-indigo-800 font-medium">English</a>
+        </div>
+    </div>
     <footer class="bg-gray-800 text-white py-4 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>© 2025 openai2025 Copyright</p>
+            <p class="text-sm sm:text-base">© 2025 openai2025 Copyright</p>
         </div>
     </footer>
 
