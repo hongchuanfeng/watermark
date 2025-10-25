@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# 允许所有爬虫访问所有文件和目录
+# Allow all crawlers to access all files and directories
+
+# 网站地图位置（如果有的话）
+# Sitemap: https://watermark.openai2025.com/sitemap.xml
+
+# 爬虫延迟设置（可选）
+# Crawl-delay: 1
